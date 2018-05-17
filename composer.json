@@ -39,6 +39,7 @@
         "drupal/geolocation": "^2.0",
         "drupal/google_analytics": "^2.2",
         "drupal/group": "^1.0",
+        "drupal/honeypot": "^1.27",
         "drupal/image_effects": "~2.0",
         "drupal/image_widget_crop": "^2.1",
         "drupal/inline_entity_form": "^1.0",
