@@ -18,6 +18,7 @@
         "drupal/addtoany": "^1.9",
         "drupal/asset_injector": "^2.2",
         "drupal/block_class": "^1.0",
+        "drupal/bootstrap": "^3.11",
         "drupal/config_direct_save": "^1.0",
         "drupal/config_installer": "^1.0",
         "drupal/console": "^1",
