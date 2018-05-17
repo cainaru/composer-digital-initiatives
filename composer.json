@@ -50,6 +50,7 @@
         "drupal/video_embed_field": "^2.0",
         "drupal/views_bulk_operations": "^2.3",
         "drupal/views_timelinejs": "^3.1",
+        "drupal/viewsreference": "^2.0",
         "drush-ops/behat-drush-endpoint": "^0.0.5",
         "drush/drush": "~8",
         "pantheon-systems/quicksilver-pushback": "~1",
