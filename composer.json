@@ -35,6 +35,7 @@
         "drupal/geolocation": "^2.0",
         "drupal/google_analytics": "^2.2",
         "drupal/group": "^1.0",
+        "drupal/image_effects": "~2.0",
         "drupal/simple_block": "^1.0@beta",
         "drush-ops/behat-drush-endpoint": "^0.0.5",
         "drush/drush": "~8",
