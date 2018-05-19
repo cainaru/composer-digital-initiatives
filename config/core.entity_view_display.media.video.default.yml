@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.video.field_media_file_size
+    - field.field.media.video.field_media_mime_type
     - field.field.media.video.field_media_video_file
     - media.type.video
   module:
@@ -30,6 +32,8 @@ content:
     region: content
 hidden:
   created: true
+  field_media_file_size: true
+  field_media_mime_type: true
   name: true
   thumbnail: true
   uid: true
