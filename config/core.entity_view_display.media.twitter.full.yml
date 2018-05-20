@@ -1,0 +1,71 @@
+uuid: 05820879-5fec-4500-9bb7-0240e1cf2a6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - field.field.media.twitter.field_media_twitter
+    - field.field.media.twitter.field_media_twitter_id
+    - field.field.media.twitter.field_media_twitter_user_info
+    - image.style.thumbnail
+    - media.type.twitter
+  module:
+    - image
+    - media_entity_twitter
+    - user
+id: media.twitter.full
+targetEntityType: media
+bundle: twitter
+mode: full
+content:
+  created:
+    label: inline
+    type: timestamp
+    weight: 4
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  field_media_twitter:
+    weight: 0
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: twitter_embed
+    region: content
+  field_media_twitter_id:
+    weight: 2
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_media_twitter_user_info:
+    weight: 1
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  thumbnail:
+    type: image
+    weight: 3
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    region: content
+    third_party_settings: {  }
+  uid:
+    label: inline
+    type: author
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  name: true

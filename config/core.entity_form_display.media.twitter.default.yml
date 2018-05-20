@@ -1,0 +1,56 @@
+uuid: 9d228ba6-cbc1-43c5-8016-efbb6d2d24f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.twitter.field_media_twitter
+    - field.field.media.twitter.field_media_twitter_id
+    - field.field.media.twitter.field_media_twitter_user_info
+    - media.type.twitter
+id: media.twitter.default
+targetEntityType: media
+bundle: twitter
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_media_twitter:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  field_media_twitter_id: true
+  field_media_twitter_user_info: true
+  path: true
