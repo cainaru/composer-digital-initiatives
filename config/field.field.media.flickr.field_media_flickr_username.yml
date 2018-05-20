@@ -1,0 +1,19 @@
+uuid: ef210822-d52f-4054-b6c5-93021d9663d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_flickr_username
+    - media.type.flickr
+id: media.flickr.field_media_flickr_username
+field_name: field_media_flickr_username
+entity_type: media
+bundle: flickr
+label: Author
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

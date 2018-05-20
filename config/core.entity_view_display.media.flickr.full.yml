@@ -1,0 +1,79 @@
+uuid: 7163ef82-189f-4192-85c6-326264fbd481
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - field.field.media.flickr.field_media_flickr
+    - field.field.media.flickr.field_media_flickr_shortcode
+    - field.field.media.flickr.field_media_flickr_username
+    - image.style.thumbnail
+    - media.type.flickr
+  module:
+    - image
+    - media_entity_flickr
+    - user
+_core:
+  default_config_hash: 0CJGIblWl39fwxkX-rnwyDEiiaFpyQa5LqgVvPV3rcE
+id: media.flickr.full
+targetEntityType: media
+bundle: flickr
+mode: full
+content:
+  created:
+    label: inline
+    type: timestamp
+    weight: 5
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  field_media_flickr:
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: flickr_embed
+    weight: 1
+    region: content
+  field_media_flickr_shortcode:
+    type: basic_string
+    weight: 3
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_media_flickr_username:
+    weight: 2
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  thumbnail:
+    type: image
+    weight: 4
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    region: content
+    third_party_settings: {  }
+  uid:
+    label: inline
+    type: author
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
