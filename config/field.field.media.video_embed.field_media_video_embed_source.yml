@@ -1,0 +1,19 @@
+uuid: f65d3097-60a7-48eb-a04b-7a10abca617c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_video_embed_source
+    - media.type.video_embed
+id: media.video_embed.field_media_video_embed_source
+field_name: field_media_video_embed_source
+entity_type: media
+bundle: video_embed
+label: Source
+description: 'Video source machine name.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

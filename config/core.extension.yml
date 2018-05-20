@@ -29,6 +29,9 @@ module:
   image_widget_crop: 0
   link: 0
   media: 0
+  media_entity_facebook: 0
+  media_entity_flickr: 0
+  media_entity_twitter: 0
   menu_ui: 0
   node: 0
   options: 0
@@ -46,6 +49,8 @@ module:
   tour: 0
   update: 0
   user: 0
+  video_embed_field: 0
+  video_embed_media: 0
   views_ui: 0
   menu_link_content: 1
   views: 10

@@ -1,55 +1,61 @@
-uuid: 8ab324ab-114a-401c-baa9-b1014770b0bc
+uuid: c7ff456a-edf8-4bc6-a76f-1e236e63c3dd
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.audio.field_media_audio_file
-    - media.type.audio
+    - field.field.media.flickr.field_media_flickr
+    - media.type.flickr
   module:
-    - file
+    - path
 _core:
-  default_config_hash: RyyyRmiREZqnypsWhFFLYjMH0WRej2Pe8-H-8wh1o-Q
-id: media.audio.default
+  default_config_hash: OlhR8I9Q-iF_96PT-_2d1JceMRlPp_slV78qOVXAO20
+id: media.flickr.default
 targetEntityType: media
-bundle: audio
+bundle: flickr
 mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 3
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_media_audio_file:
-    weight: 1
+  field_media_flickr:
     settings:
-      progress_indicator: throbber
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: file_generic
+    type: string_textfield
+    weight: 101
     region: content
   name:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 100
     region: content
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     region: content
     third_party_settings: {  }
-hidden:
-  path: true
+hidden: {  }

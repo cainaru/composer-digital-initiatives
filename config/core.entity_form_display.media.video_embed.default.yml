@@ -1,17 +1,19 @@
-uuid: 8ab324ab-114a-401c-baa9-b1014770b0bc
+uuid: 0f9e93b9-fab0-41aa-b68b-915859f4b6e4
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.audio.field_media_audio_file
-    - media.type.audio
+    - field.field.media.video_embed.field_media_video_embed_field
+    - field.field.media.video_embed.field_media_video_embed_id
+    - field.field.media.video_embed.field_media_video_embed_image_lo
+    - field.field.media.video_embed.field_media_video_embed_source
+    - field.field.media.video_embed.field_media_video_embed_source_n
+    - media.type.video_embed
   module:
-    - file
-_core:
-  default_config_hash: RyyyRmiREZqnypsWhFFLYjMH0WRej2Pe8-H-8wh1o-Q
-id: media.audio.default
+    - video_embed_field
+id: media.video_embed.default
 targetEntityType: media
-bundle: audio
+bundle: video_embed
 mode: default
 content:
   created:
@@ -20,12 +22,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_media_audio_file:
+  field_media_video_embed_field:
     weight: 1
-    settings:
-      progress_indicator: throbber
+    settings: {  }
     third_party_settings: {  }
-    type: file_generic
+    type: video_embed_field_textfield
     region: content
   name:
     type: string_textfield
@@ -52,4 +53,8 @@ content:
     region: content
     third_party_settings: {  }
 hidden:
+  field_media_video_embed_id: true
+  field_media_video_embed_image_lo: true
+  field_media_video_embed_source: true
+  field_media_video_embed_source_n: true
   path: true
