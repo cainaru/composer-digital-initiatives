@@ -1,0 +1,100 @@
+uuid: 7cf43ca0-c707-4dbf-b718-867bdfb1296c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - field.field.media.video_embed.field_media_video_embed_field
+    - field.field.media.video_embed.field_media_video_embed_id
+    - field.field.media.video_embed.field_media_video_embed_image_lo
+    - field.field.media.video_embed.field_media_video_embed_source
+    - field.field.media.video_embed.field_media_video_embed_source_n
+    - image.style.thumbnail
+    - media.type.video_embed
+  module:
+    - image
+    - user
+    - video_embed_field
+id: media.video_embed.full
+targetEntityType: media
+bundle: video_embed
+mode: full
+content:
+  created:
+    label: inline
+    type: timestamp
+    weight: 8
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  field_media_video_embed_field:
+    weight: 1
+    label: visually_hidden
+    settings:
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: false
+    third_party_settings: {  }
+    type: video_embed_field_video
+    region: content
+  field_media_video_embed_id:
+    weight: 2
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_media_video_embed_image_lo:
+    weight: 6
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_media_video_embed_source:
+    weight: 3
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_media_video_embed_source_n:
+    weight: 4
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  thumbnail:
+    type: image
+    weight: 5
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    region: content
+    third_party_settings: {  }
+  uid:
+    label: inline
+    type: author
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
