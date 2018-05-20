@@ -9,7 +9,7 @@ id: media.twitter.field_media_twitter_user_info
 field_name: field_media_twitter_user_info
 entity_type: media
 bundle: twitter
-label: Author
+label: 'Author (username)'
 description: ''
 required: false
 translatable: false
