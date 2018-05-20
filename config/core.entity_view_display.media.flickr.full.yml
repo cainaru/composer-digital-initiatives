@@ -38,13 +38,12 @@ content:
     weight: 1
     region: content
   field_media_flickr_shortcode:
+    type: basic_string
     weight: 3
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
     region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
   field_media_flickr_username:
     weight: 2
     label: inline
