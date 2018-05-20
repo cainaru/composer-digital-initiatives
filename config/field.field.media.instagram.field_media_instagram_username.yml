@@ -9,7 +9,7 @@ id: media.instagram.field_media_instagram_username
 field_name: field_media_instagram_username
 entity_type: media
 bundle: instagram
-label: Author
+label: 'Author (username)'
 description: ''
 required: false
 translatable: false
