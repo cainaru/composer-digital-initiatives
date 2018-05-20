@@ -9,7 +9,7 @@ id: media.facebook.field_media_facebook_author_name
 field_name: field_media_facebook_author_name
 entity_type: media
 bundle: facebook
-label: 'Author Name'
+label: Author
 description: ''
 required: false
 translatable: false
