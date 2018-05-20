@@ -24,17 +24,10 @@ content:
     type: file_default
     weight: 0
     region: content
-  field_media_mime_type:
-    type: string
-    weight: 5
-    region: content
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
 hidden:
   created: true
   field_media_file_size: true
+  field_media_mime_type: true
   name: true
   thumbnail: true
   uid: true
