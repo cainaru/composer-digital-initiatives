@@ -13,9 +13,70 @@ dependencies:
     - image.style.thumbnail
     - media.type.instagram
   module:
+    - field_group
     - image
     - media_entity_instagram
     - user
+third_party_settings:
+  field_group:
+    group_metadata:
+      children:
+        - group_provided_fields
+        - group_uploader_info
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h2
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Metadata
+      region: content
+    group_provided_fields:
+      children:
+        - field_media_instagram_username
+        - field_media_instagram_caption
+        - field_media_instagram_type
+        - field_media_instagram_id
+        - field_media_instagram_shortcode
+        - thumbnail
+      parent_name: group_metadata
+      weight: 11
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Provided Fields'
+      region: content
+    group_uploader_info:
+      children:
+        - created
+        - uid
+      parent_name: group_metadata
+      weight: 12
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Uploader Info'
+      region: content
 id: media.instagram.full
 targetEntityType: media
 bundle: instagram
@@ -24,7 +85,7 @@ content:
   created:
     label: inline
     type: timestamp
-    weight: 8
+    weight: 9
     region: content
     settings:
       date_format: medium
@@ -41,14 +102,14 @@ content:
     type: instagram_embed
     region: content
   field_media_instagram_caption:
-    weight: 2
+    weight: 5
     label: inline
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_media_instagram_id:
-    weight: 5
+    weight: 7
     label: inline
     settings:
       link_to_entity: false
@@ -56,7 +117,7 @@ content:
     type: string
     region: content
   field_media_instagram_shortcode:
-    weight: 6
+    weight: 8
     label: inline
     settings:
       link_to_entity: false
@@ -64,7 +125,7 @@ content:
     type: string
     region: content
   field_media_instagram_type:
-    weight: 4
+    weight: 6
     label: inline
     settings:
       link_to_entity: false
@@ -72,7 +133,7 @@ content:
     type: string
     region: content
   field_media_instagram_username:
-    weight: 3
+    weight: 4
     label: inline
     settings:
       link_to_entity: false
@@ -89,7 +150,7 @@ content:
     third_party_settings: {  }
   thumbnail:
     type: image
-    weight: 7
+    weight: 9
     label: hidden
     settings:
       image_style: thumbnail
@@ -99,7 +160,7 @@ content:
   uid:
     label: inline
     type: author
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }

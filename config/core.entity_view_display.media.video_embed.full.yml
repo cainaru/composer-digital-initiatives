@@ -12,9 +12,69 @@ dependencies:
     - image.style.thumbnail
     - media.type.video_embed
   module:
+    - field_group
     - image
     - user
     - video_embed_field
+third_party_settings:
+  field_group:
+    group_metadata:
+      children:
+        - group_provided_fields
+        - group_uploader_info
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h2
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Metadata
+      region: content
+    group_provided_fields:
+      children:
+        - field_media_video_embed_id
+        - field_media_video_embed_source
+        - field_media_video_embed_source_n
+        - field_media_video_embed_image_lo
+        - thumbnail
+      parent_name: group_metadata
+      weight: 10
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Provided Fields'
+      region: content
+    group_uploader_info:
+      children:
+        - created
+        - uid
+      parent_name: group_metadata
+      weight: 11
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Uploader Info'
+      region: content
 id: media.video_embed.full
 targetEntityType: media
 bundle: video_embed
@@ -23,7 +83,7 @@ content:
   created:
     label: inline
     type: timestamp
-    weight: 8
+    weight: 9
     region: content
     settings:
       date_format: medium
@@ -42,7 +102,7 @@ content:
     type: video_embed_field_video
     region: content
   field_media_video_embed_id:
-    weight: 2
+    weight: 3
     label: inline
     settings:
       link_to_entity: false
@@ -58,7 +118,7 @@ content:
     type: string
     region: content
   field_media_video_embed_source:
-    weight: 3
+    weight: 4
     label: inline
     settings:
       link_to_entity: false
@@ -66,7 +126,7 @@ content:
     type: string
     region: content
   field_media_video_embed_source_n:
-    weight: 4
+    weight: 5
     label: inline
     settings:
       link_to_entity: false
@@ -83,7 +143,7 @@ content:
     third_party_settings: {  }
   thumbnail:
     type: image
-    weight: 5
+    weight: 7
     label: hidden
     settings:
       image_style: thumbnail
@@ -93,7 +153,7 @@ content:
   uid:
     label: inline
     type: author
-    weight: 7
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
