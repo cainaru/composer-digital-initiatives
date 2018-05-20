@@ -10,9 +10,67 @@ dependencies:
     - image.style.thumbnail
     - media.type.twitter
   module:
+    - field_group
     - image
     - media_entity_twitter
     - user
+third_party_settings:
+  field_group:
+    group_metadata:
+      children:
+        - group_provided_fields
+        - group_uploader_info
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h2
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Metadata
+      region: content
+    group_provided_fields:
+      children:
+        - field_media_twitter_user_info
+        - field_media_twitter_id
+        - thumbnail
+      parent_name: group_metadata
+      weight: 8
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Provided Fields'
+      region: content
+    group_uploader_info:
+      children:
+        - created
+        - uid
+      parent_name: group_metadata
+      weight: 9
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Uploader Info'
+      region: content
 id: media.twitter.full
 targetEntityType: media
 bundle: twitter
@@ -21,7 +79,7 @@ content:
   created:
     label: inline
     type: timestamp
-    weight: 5
+    weight: 6
     region: content
     settings:
       date_format: medium
@@ -36,7 +94,7 @@ content:
     type: twitter_embed
     region: content
   field_media_twitter_id:
-    weight: 3
+    weight: 4
     label: inline
     settings:
       link_to_entity: false
@@ -44,7 +102,7 @@ content:
     type: string
     region: content
   field_media_twitter_user_info:
-    weight: 2
+    weight: 3
     label: inline
     settings:
       link_to_entity: false
@@ -61,7 +119,7 @@ content:
     third_party_settings: {  }
   thumbnail:
     type: image
-    weight: 4
+    weight: 5
     label: hidden
     settings:
       image_style: thumbnail
@@ -71,7 +129,7 @@ content:
   uid:
     label: inline
     type: author
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }

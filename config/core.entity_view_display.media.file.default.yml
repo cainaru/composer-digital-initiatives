@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.media.file.field_media_file
+    - field.field.media.file.field_media_file_size
+    - field.field.media.file.field_media_mime_type
     - media.type.file
   module:
     - file
@@ -16,13 +18,23 @@ mode: default
 content:
   field_media_file:
     label: visually_hidden
-    settings: {  }
+    settings:
+      use_description_as_link_text: true
     third_party_settings: {  }
     type: file_default
-    weight: 1
+    weight: 0
     region: content
+  field_media_mime_type:
+    type: string
+    weight: 5
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
   created: true
+  field_media_file_size: true
   name: true
   thumbnail: true
   uid: true

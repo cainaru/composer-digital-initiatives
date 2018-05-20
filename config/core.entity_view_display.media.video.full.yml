@@ -9,7 +9,64 @@ dependencies:
     - field.field.media.video.field_media_video_file
     - media.type.video
   module:
+    - field_group
     - file
+third_party_settings:
+  field_group:
+    group_metadata:
+      children:
+        - group_provided_fields
+        - group_uploader_info
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h2
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Metadata
+      region: content
+    group_provided_fields:
+      children:
+        - field_media_mime_type
+        - field_media_file_size
+      parent_name: group_metadata
+      weight: 8
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Provided Fields'
+      region: content
+    group_uploader_info:
+      children:
+        - created
+        - uid
+      parent_name: group_metadata
+      weight: 9
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Uploader Info'
+      region: content
 _core:
   default_config_hash: dQR0mYK5NNg27OigHrxZrHSsnwewnNZcPJKjKIO0cpA
 id: media.video.full
@@ -19,7 +76,7 @@ mode: full
 content:
   created:
     type: timestamp
-    weight: 4
+    weight: 5
     region: content
     label: inline
     settings:
@@ -28,7 +85,7 @@ content:
       timezone: ''
     third_party_settings: {  }
   field_media_file_size:
-    weight: 3
+    weight: 4
     label: inline
     settings:
       thousand_separator: ''
@@ -39,7 +96,7 @@ content:
     type: number_decimal
     region: content
   field_media_mime_type:
-    weight: 2
+    weight: 3
     label: inline
     settings:
       link_to_entity: false
