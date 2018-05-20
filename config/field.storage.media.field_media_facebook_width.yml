@@ -1,0 +1,20 @@
+uuid: 67b3c868-3e24-42db-8ec0-a4c0db7c3a0d
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.field_media_facebook_width
+field_name: field_media_facebook_width
+entity_type: media
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

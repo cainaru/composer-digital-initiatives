@@ -1,19 +1,18 @@
-uuid: 8ab324ab-114a-401c-baa9-b1014770b0bc
+uuid: 3e862fc2-2fe3-4660-b923-f059a2a63988
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.audio.field_media_audio_file
-    - field.field.media.audio.field_media_file_size
-    - field.field.media.audio.field_media_mime_type
-    - media.type.audio
-  module:
-    - file
-_core:
-  default_config_hash: RyyyRmiREZqnypsWhFFLYjMH0WRej2Pe8-H-8wh1o-Q
-id: media.audio.default
+    - field.field.media.facebook.field_media_facebook
+    - field.field.media.facebook.field_media_facebook_author_name
+    - field.field.media.facebook.field_media_facebook_height
+    - field.field.media.facebook.field_media_facebook_html
+    - field.field.media.facebook.field_media_facebook_url
+    - field.field.media.facebook.field_media_facebook_width
+    - media.type.facebook
+id: media.facebook.default
 targetEntityType: media
-bundle: audio
+bundle: facebook
 mode: default
 content:
   created:
@@ -22,28 +21,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_media_audio_file:
+  field_media_facebook:
     weight: 1
     settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: file_generic
-    region: content
-  field_media_file_size:
-    type: number
-    weight: 6
-    region: content
-    settings:
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_media_mime_type:
-    type: string_textfield
-    weight: 7
+    type: string_textarea
     region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   name:
     type: string_textfield
     weight: 0
@@ -69,4 +54,9 @@ content:
     region: content
     third_party_settings: {  }
 hidden:
+  field_media_facebook_author_name: true
+  field_media_facebook_height: true
+  field_media_facebook_html: true
+  field_media_facebook_url: true
+  field_media_facebook_width: true
   path: true

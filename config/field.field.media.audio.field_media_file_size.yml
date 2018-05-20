@@ -1,0 +1,23 @@
+uuid: aa98036e-20c4-461d-8885-b9bb548071a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_file_size
+    - media.type.audio
+id: media.audio.field_media_file_size
+field_name: field_media_file_size
+entity_type: media
+bundle: audio
+label: 'File Size'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

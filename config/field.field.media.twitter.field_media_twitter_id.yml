@@ -1,0 +1,19 @@
+uuid: 2dbfd9b3-1241-4d74-b6d8-e05ab6c14042
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_twitter_id
+    - media.type.twitter
+id: media.twitter.field_media_twitter_id
+field_name: field_media_twitter_id
+entity_type: media
+bundle: twitter
+label: 'Twitter ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

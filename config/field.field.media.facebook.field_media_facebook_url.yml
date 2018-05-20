@@ -1,0 +1,23 @@
+uuid: 917ecdcd-7e0b-4db2-a735-c5ed7c87aace
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_facebook_url
+    - media.type.facebook
+  module:
+    - link
+id: media.facebook.field_media_facebook_url
+field_name: field_media_facebook_url
+entity_type: media
+bundle: facebook
+label: URL
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

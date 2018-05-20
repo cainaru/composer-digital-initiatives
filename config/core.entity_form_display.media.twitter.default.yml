@@ -1,19 +1,15 @@
-uuid: 8ab324ab-114a-401c-baa9-b1014770b0bc
+uuid: 9d228ba6-cbc1-43c5-8016-efbb6d2d24f5
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.audio.field_media_audio_file
-    - field.field.media.audio.field_media_file_size
-    - field.field.media.audio.field_media_mime_type
-    - media.type.audio
-  module:
-    - file
-_core:
-  default_config_hash: RyyyRmiREZqnypsWhFFLYjMH0WRej2Pe8-H-8wh1o-Q
-id: media.audio.default
+    - field.field.media.twitter.field_media_twitter
+    - field.field.media.twitter.field_media_twitter_id
+    - field.field.media.twitter.field_media_twitter_user_info
+    - media.type.twitter
+id: media.twitter.default
 targetEntityType: media
-bundle: audio
+bundle: twitter
 mode: default
 content:
   created:
@@ -22,28 +18,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_media_audio_file:
+  field_media_twitter:
     weight: 1
-    settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: file_generic
-    region: content
-  field_media_file_size:
-    type: number
-    weight: 6
-    region: content
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-  field_media_mime_type:
-    type: string_textfield
-    weight: 7
-    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
+    region: content
   name:
     type: string_textfield
     weight: 0
@@ -69,4 +51,6 @@ content:
     region: content
     third_party_settings: {  }
 hidden:
+  field_media_twitter_id: true
+  field_media_twitter_user_info: true
   path: true

@@ -1,0 +1,19 @@
+uuid: 554ce9ba-3169-4d0f-b37a-99776628c98c
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.field_media_facebook_html
+field_name: field_media_facebook_html
+entity_type: media
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

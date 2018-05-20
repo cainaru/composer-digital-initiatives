@@ -11,10 +11,14 @@ module:
   contact: 0
   contextual: 0
   crop: 0
+  ctools: 0
   datetime: 0
   dblog: 0
+  dropzonejs: 0
+  dropzonejs_eb_widget: 0
   dynamic_page_cache: 0
   editor: 0
+  entity_browser: 0
   field: 0
   field_ui: 0
   file: 0
@@ -29,6 +33,7 @@ module:
   image_widget_crop: 0
   link: 0
   media: 0
+  media_entity_browser: 0
   media_entity_facebook: 0
   media_entity_flickr: 0
   media_entity_twitter: 0
