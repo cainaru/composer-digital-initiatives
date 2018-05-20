@@ -29,6 +29,9 @@ module:
   image_widget_crop: 0
   link: 0
   media: 0
+  media_entity_facebook: 0
+  media_entity_flickr: 0
+  media_entity_twitter: 0
   menu_ui: 0
   node: 0
   options: 0
