@@ -1,0 +1,23 @@
+uuid: f8c8a612-6e74-42b5-9eae-e27bcf71fb28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_facebook_height
+    - media.type.facebook
+id: media.facebook.field_media_facebook_height
+field_name: field_media_facebook_height
+entity_type: media
+bundle: facebook
+label: Height
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: px
+field_type: integer

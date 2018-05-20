@@ -1,0 +1,111 @@
+uuid: e0c328ad-127a-45e9-bfb1-38195758b428
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - field.field.media.facebook.field_media_facebook
+    - field.field.media.facebook.field_media_facebook_author_name
+    - field.field.media.facebook.field_media_facebook_height
+    - field.field.media.facebook.field_media_facebook_html
+    - field.field.media.facebook.field_media_facebook_url
+    - field.field.media.facebook.field_media_facebook_width
+    - image.style.thumbnail
+    - media.type.facebook
+  module:
+    - image
+    - link
+    - media_entity_facebook
+    - user
+id: media.facebook.full
+targetEntityType: media
+bundle: facebook
+mode: full
+content:
+  created:
+    label: inline
+    type: timestamp
+    weight: 8
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  field_media_facebook:
+    weight: 1
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: facebook_embed
+    region: content
+  field_media_facebook_author_name:
+    weight: 2
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_media_facebook_height:
+    weight: 5
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_media_facebook_html:
+    weight: 6
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_media_facebook_url:
+    weight: 3
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_media_facebook_width:
+    weight: 4
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  name:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  thumbnail:
+    type: image
+    weight: 7
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    region: content
+    third_party_settings: {  }
+  uid:
+    label: inline
+    type: author
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
