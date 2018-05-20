@@ -25,9 +25,19 @@ widgets:
     settings:
       view: media_entity_browser
       view_display: entity_browser_1
-      submit_text: 'Select entities'
+      submit_text: 'Select media'
       auto_select: false
     uuid: 6586703a-6976-4124-8a49-cbb07ceaa3b1
-    weight: 1
-    label: view
+    weight: -9
+    label: 'All Media'
+    id: view
+  2c76b4d3-14f1-4487-a828-f4bc5f1ca6d8:
+    settings:
+      view: media_entity_browser
+      view_display: entity_browser_2
+      submit_text: 'Select media'
+      auto_select: false
+    uuid: 2c76b4d3-14f1-4487-a828-f4bc5f1ca6d8
+    weight: -10
+    label: 'My Media'
     id: view
