@@ -1,0 +1,106 @@
+uuid: e9a62069-0c24-4d85-933a-04e8fab420a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - field.field.media.instagram.field_media_instagram
+    - field.field.media.instagram.field_media_instagram_caption
+    - field.field.media.instagram.field_media_instagram_id
+    - field.field.media.instagram.field_media_instagram_shortcode
+    - field.field.media.instagram.field_media_instagram_type
+    - field.field.media.instagram.field_media_instagram_username
+    - image.style.thumbnail
+    - media.type.instagram
+  module:
+    - image
+    - media_entity_instagram
+    - user
+id: media.instagram.full
+targetEntityType: media
+bundle: instagram
+mode: full
+content:
+  created:
+    label: inline
+    type: timestamp
+    weight: 8
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  field_media_instagram:
+    weight: 1
+    label: visually_hidden
+    settings:
+      width: null
+      hidecaption: false
+    third_party_settings: {  }
+    type: instagram_embed
+    region: content
+  field_media_instagram_caption:
+    weight: 2
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_media_instagram_id:
+    weight: 5
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_media_instagram_shortcode:
+    weight: 6
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_media_instagram_type:
+    weight: 4
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_media_instagram_username:
+    weight: 3
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  thumbnail:
+    type: image
+    weight: 7
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    region: content
+    third_party_settings: {  }
+  uid:
+    label: inline
+    type: author
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
