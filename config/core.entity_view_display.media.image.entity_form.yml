@@ -1,0 +1,102 @@
+uuid: 02328d1f-d866-4e2e-a5f6-2661ba4d0582
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.entity_form
+    - field.field.media.image.field_media_file_size
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_media_image_height
+    - field.field.media.image.field_media_image_width
+    - field.field.media.image.field_media_mime_type
+    - image.style.large
+    - media.type.image
+  module:
+    - field_group
+    - image
+third_party_settings:
+  field_group:
+    group_uploader_info:
+      children:
+        - created
+        - uid
+      parent_name: group_metadata
+      weight: 4
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Uploader Info'
+      region: content
+    group_metadata:
+      children:
+        - name
+        - group_uploader_info
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h2
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Metadata
+      region: content
+_core:
+  default_config_hash: jOwnt_yq6AKAfqU6f0xKnxEkFQ2eTPJWxrk3WMLbL68
+id: media.image.entity_form
+targetEntityType: media
+bundle: image
+mode: entity_form
+content:
+  created:
+    type: timestamp
+    weight: 5
+    region: content
+    label: inline
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  field_media_image:
+    label: visually_hidden
+    settings:
+      image_style: large
+      image_link: file
+    third_party_settings: {  }
+    type: image
+    weight: 0
+    region: content
+  name:
+    type: string
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_label
+    weight: 6
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+hidden:
+  field_media_file_size: true
+  field_media_image_height: true
+  field_media_image_width: true
+  field_media_mime_type: true
+  thumbnail: true
