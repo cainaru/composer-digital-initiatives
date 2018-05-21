@@ -19,6 +19,7 @@ module:
   dynamic_page_cache: 0
   editor: 0
   entity_browser: 0
+  entity_browser_entity_form: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -32,6 +33,7 @@ module:
   image: 0
   image_effects: 0
   image_widget_crop: 0
+  inline_entity_form: 0
   link: 0
   media: 0
   media_entity_browser: 0
