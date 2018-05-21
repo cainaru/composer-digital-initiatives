@@ -1,0 +1,17 @@
+uuid: 05a4d078-85a3-4480-a6e9-3a0543cdea58
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Narrative
+type: narrative
+description: 'Use <em>narrative</em> to create a narrative piece.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false
