@@ -1,0 +1,17 @@
+name: 'Digital Initiatives Media'
+type: module
+description: 'Awesome media handling for Digital Initiatives. So lit, you shouldn’t touch with bare hands.'
+core: 8.x
+package: 'Digital Initiatives'
+dependencies:
+  - crop
+  - ctools
+  - dropzonejs_eb_widget
+  - entity_browser
+  - entity_browser_entity_form
+  - field_group
+  - image
+  - media
+  - media_entity_browser
+  - user
+  - views

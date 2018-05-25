@@ -1,0 +1,19 @@
+uuid: 1edfa302-2a54-41eb-baa1-2c054b6eb326
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_author_username
+    - media.type.flickr
+id: media.flickr.field_media_author_username
+field_name: field_media_author_username
+entity_type: media
+bundle: flickr
+label: 'Author (username)'
+description: 'Username of the author of this content.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

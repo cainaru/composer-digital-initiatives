@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_media_description
+    - field.field.media.image.field_media_file_size
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_media_image_height
+    - field.field.media.image.field_media_image_width
+    - field.field.media.image.field_media_mime_type
+    - media.type.image
+  module:
+    - image
+id: media.image.default
+targetEntityType: media
+bundle: image
+mode: default
+content:
+  field_media_image:
+    label: visually_hidden
+    settings:
+      image_style: ''
+      image_link: file
+    third_party_settings: {  }
+    type: image
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_media_description: true
+  field_media_file_size: true
+  field_media_image_height: true
+  field_media_image_width: true
+  field_media_mime_type: true
+  name: true
+  thumbnail: true
+  uid: true

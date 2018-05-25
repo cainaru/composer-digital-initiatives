@@ -1,0 +1,19 @@
+uuid: 188dbead-9601-4e08-b7c3-343d389ac4f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_description
+    - media.type.image
+id: media.image.field_media_description
+field_name: field_media_description
+entity_type: media
+bundle: image
+label: Description
+description: 'Enter a brief description of this media.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

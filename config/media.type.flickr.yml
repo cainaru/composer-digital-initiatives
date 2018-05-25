@@ -20,4 +20,4 @@ source_configuration:
   source_field: field_media_flickr
 field_map:
   shortcode: field_media_flickr_shortcode
-  username: field_media_flickr_username
+  username: field_media_author_username

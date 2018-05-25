@@ -3,9 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.twitter.field_media_author_username
+    - field.field.media.twitter.field_media_description
     - field.field.media.twitter.field_media_twitter
     - field.field.media.twitter.field_media_twitter_id
-    - field.field.media.twitter.field_media_twitter_user_info
     - media.type.twitter
   module:
     - media_entity_twitter
@@ -23,8 +24,9 @@ content:
     region: content
 hidden:
   created: true
+  field_media_author_username: true
+  field_media_description: true
   field_media_twitter_id: true
-  field_media_twitter_user_info: true
   name: true
   thumbnail: true
   uid: true

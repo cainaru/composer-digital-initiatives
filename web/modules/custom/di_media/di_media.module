@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains di_media.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function di_media_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the di_media module.
+    case 'help.page.di_media':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Awesome media handling for Digital Initiatives. So lit, you shouldn&#039;t touch with bare hands.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function di_media_theme() {
+  return [
+    'di_media' => [
+      'render element' => 'children',
+    ],
+  ];
+}

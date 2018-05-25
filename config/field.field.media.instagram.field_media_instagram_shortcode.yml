@@ -9,7 +9,7 @@ id: media.instagram.field_media_instagram_shortcode
 field_name: field_media_instagram_shortcode
 entity_type: media
 bundle: instagram
-label: Shortcode
+label: 'Post Shortcode'
 description: ''
 required: false
 translatable: false

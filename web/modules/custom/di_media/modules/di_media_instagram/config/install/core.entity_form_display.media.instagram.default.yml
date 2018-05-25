@@ -1,0 +1,70 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.instagram.field_media_author_username
+    - field.field.media.instagram.field_media_description
+    - field.field.media.instagram.field_media_instagram
+    - field.field.media.instagram.field_media_instagram_caption
+    - field.field.media.instagram.field_media_instagram_id
+    - field.field.media.instagram.field_media_instagram_shortcode
+    - field.field.media.instagram.field_media_instagram_type
+    - media.type.instagram
+id: media.instagram.default
+targetEntityType: media
+bundle: instagram
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_media_description:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: 'A brief description of the media.'
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_media_instagram:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  field_media_author_username: true
+  field_media_instagram_caption: true
+  field_media_instagram_id: true
+  field_media_instagram_shortcode: true
+  field_media_instagram_type: true
+  path: true

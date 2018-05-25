@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.video_embed.field_media_description
     - field.field.media.video_embed.field_media_video_embed_field
     - field.field.media.video_embed.field_media_video_embed_id
     - field.field.media.video_embed.field_media_video_embed_image_lo
@@ -29,6 +30,7 @@ content:
     region: content
 hidden:
   created: true
+  field_media_description: true
   field_media_video_embed_id: true
   field_media_video_embed_image_lo: true
   field_media_video_embed_source: true

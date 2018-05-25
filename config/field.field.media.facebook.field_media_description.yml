@@ -1,0 +1,19 @@
+uuid: 9b6aa3ce-9d4e-4004-8b23-c524f1026f83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_description
+    - media.type.facebook
+id: media.facebook.field_media_description
+field_name: field_media_description
+entity_type: media
+bundle: facebook
+label: Description
+description: 'Enter a brief description of this media.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

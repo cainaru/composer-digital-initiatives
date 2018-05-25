@@ -1,0 +1,125 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - field.field.media.flickr.field_media_author_username
+    - field.field.media.flickr.field_media_description
+    - field.field.media.flickr.field_media_flickr
+    - field.field.media.flickr.field_media_flickr_shortcode
+    - media.type.flickr
+  module:
+    - field_group
+    - media_entity_flickr
+    - user
+third_party_settings:
+  field_group:
+    group_metadata:
+      children:
+        - field_media_description
+        - group_provided_fields
+        - group_uploader_info
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h2
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Metadata
+      region: content
+    group_provided_fields:
+      children:
+        - field_media_author_username
+      parent_name: group_metadata
+      weight: 8
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Provided Fields'
+      region: content
+    group_uploader_info:
+      children:
+        - created
+        - uid
+      parent_name: group_metadata
+      weight: 9
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Uploader Info'
+      region: content
+id: media.flickr.full
+targetEntityType: media
+bundle: flickr
+mode: full
+content:
+  created:
+    label: inline
+    type: timestamp
+    weight: 6
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  field_media_author_username:
+    type: string
+    weight: 3
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_media_description:
+    type: basic_string
+    weight: 0
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_media_flickr:
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: flickr_embed
+    weight: 1
+    region: content
+  name:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  uid:
+    label: inline
+    type: author
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_media_flickr_shortcode: true
+  thumbnail: true

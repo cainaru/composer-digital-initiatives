@@ -4,23 +4,23 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.full
+    - field.field.media.instagram.field_media_author_username
+    - field.field.media.instagram.field_media_description
     - field.field.media.instagram.field_media_instagram
     - field.field.media.instagram.field_media_instagram_caption
     - field.field.media.instagram.field_media_instagram_id
     - field.field.media.instagram.field_media_instagram_shortcode
     - field.field.media.instagram.field_media_instagram_type
-    - field.field.media.instagram.field_media_instagram_username
-    - image.style.thumbnail
     - media.type.instagram
   module:
     - field_group
-    - image
     - media_entity_instagram
     - user
 third_party_settings:
   field_group:
     group_metadata:
       children:
+        - field_media_description
         - group_provided_fields
         - group_uploader_info
       parent_name: ''
@@ -39,12 +39,9 @@ third_party_settings:
       region: content
     group_provided_fields:
       children:
-        - field_media_instagram_username
+        - field_media_author_username
         - field_media_instagram_caption
-        - field_media_instagram_type
-        - field_media_instagram_id
         - field_media_instagram_shortcode
-        - thumbnail
       parent_name: group_metadata
       weight: 11
       format_type: html_element
@@ -92,6 +89,21 @@ content:
       custom_date_format: ''
       timezone: ''
     third_party_settings: {  }
+  field_media_author_username:
+    type: string
+    weight: 3
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_media_description:
+    type: basic_string
+    weight: 0
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
   field_media_instagram:
     weight: 1
     label: visually_hidden
@@ -108,32 +120,8 @@ content:
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_media_instagram_id:
-    weight: 7
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_media_instagram_shortcode:
     weight: 8
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_media_instagram_type:
-    weight: 6
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_media_instagram_username:
-    weight: 4
     label: inline
     settings:
       link_to_entity: false
@@ -148,15 +136,6 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  thumbnail:
-    type: image
-    weight: 9
-    label: hidden
-    settings:
-      image_style: thumbnail
-      image_link: ''
-    region: content
-    third_party_settings: {  }
   uid:
     label: inline
     type: author
@@ -164,4 +143,7 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_media_instagram_id: true
+  field_media_instagram_type: true
+  thumbnail: true
