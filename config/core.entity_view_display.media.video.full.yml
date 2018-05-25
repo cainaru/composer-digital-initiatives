@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.full
+    - field.field.media.video.field_media_description
     - field.field.media.video.field_media_file_size
     - field.field.media.video.field_media_mime_type
     - field.field.media.video.field_media_video_file
@@ -15,6 +16,7 @@ third_party_settings:
   field_group:
     group_metadata:
       children:
+        - field_media_description
         - group_provided_fields
         - group_uploader_info
       parent_name: ''
@@ -84,13 +86,20 @@ content:
       custom_date_format: ''
       timezone: ''
     third_party_settings: {  }
+  field_media_description:
+    type: basic_string
+    weight: 0
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
   field_media_file_size:
     weight: 4
     label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
-      scale: 2
+      scale: 0
       prefix_suffix: true
     third_party_settings: {  }
     type: number_decimal

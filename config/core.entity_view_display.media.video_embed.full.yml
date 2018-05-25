@@ -4,22 +4,22 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.full
+    - field.field.media.video_embed.field_media_description
     - field.field.media.video_embed.field_media_video_embed_field
     - field.field.media.video_embed.field_media_video_embed_id
     - field.field.media.video_embed.field_media_video_embed_image_lo
     - field.field.media.video_embed.field_media_video_embed_source
     - field.field.media.video_embed.field_media_video_embed_source_n
-    - image.style.thumbnail
     - media.type.video_embed
   module:
     - field_group
-    - image
     - user
     - video_embed_field
 third_party_settings:
   field_group:
     group_metadata:
       children:
+        - field_media_description
         - group_provided_fields
         - group_uploader_info
       parent_name: ''
@@ -38,11 +38,8 @@ third_party_settings:
       region: content
     group_provided_fields:
       children:
-        - field_media_video_embed_id
-        - field_media_video_embed_source
         - field_media_video_embed_source_n
-        - field_media_video_embed_image_lo
-        - thumbnail
+        - field_media_video_embed_id
       parent_name: group_metadata
       weight: 10
       format_type: html_element
@@ -90,6 +87,13 @@ content:
       custom_date_format: ''
       timezone: ''
     third_party_settings: {  }
+  field_media_description:
+    type: basic_string
+    weight: 0
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
   field_media_video_embed_field:
     weight: 1
     label: visually_hidden
@@ -102,23 +106,7 @@ content:
     type: video_embed_field_video
     region: content
   field_media_video_embed_id:
-    weight: 3
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_media_video_embed_image_lo:
-    weight: 6
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_media_video_embed_source:
-    weight: 4
+    weight: 5
     label: inline
     settings:
       link_to_entity: false
@@ -126,7 +114,7 @@ content:
     type: string
     region: content
   field_media_video_embed_source_n:
-    weight: 5
+    weight: 3
     label: inline
     settings:
       link_to_entity: false
@@ -141,15 +129,6 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  thumbnail:
-    type: image
-    weight: 7
-    label: hidden
-    settings:
-      image_style: thumbnail
-      image_link: ''
-    region: content
-    third_party_settings: {  }
   uid:
     label: inline
     type: author
@@ -157,4 +136,7 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_media_video_embed_image_lo: true
+  field_media_video_embed_source: true
+  thumbnail: true

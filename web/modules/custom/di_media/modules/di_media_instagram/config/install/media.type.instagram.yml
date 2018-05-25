@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+    - media_entity_instagram
+third_party_settings:
+  crop:
+    image_field: null
+id: instagram
+label: Instagram
+description: 'A post from Instagram'
+source: instagram
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_instagram
+field_map:
+  shortcode: field_media_instagram_shortcode
+  id: field_media_instagram_id
+  type: field_media_instagram_type
+  username: field_media_author_username
+  caption: field_media_instagram_caption

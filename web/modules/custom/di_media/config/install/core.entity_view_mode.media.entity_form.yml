@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.entity_form
+label: 'Entity Form'
+targetEntityType: media
+cache: true

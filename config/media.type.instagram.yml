@@ -20,5 +20,5 @@ field_map:
   shortcode: field_media_instagram_shortcode
   id: field_media_instagram_id
   type: field_media_instagram_type
-  username: field_media_instagram_username
+  username: field_media_author_username
   caption: field_media_instagram_caption

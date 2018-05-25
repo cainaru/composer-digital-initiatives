@@ -3,8 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.facebook.field_media_author_username
+    - field.field.media.facebook.field_media_description
     - field.field.media.facebook.field_media_facebook
-    - field.field.media.facebook.field_media_facebook_author_name
     - field.field.media.facebook.field_media_facebook_height
     - field.field.media.facebook.field_media_facebook_html
     - field.field.media.facebook.field_media_facebook_url
@@ -26,7 +27,8 @@ content:
     region: content
 hidden:
   created: true
-  field_media_facebook_author_name: true
+  field_media_author_username: true
+  field_media_description: true
   field_media_facebook_height: true
   field_media_facebook_html: true
   field_media_facebook_url: true

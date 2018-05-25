@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update routines for Digital Initiatives Media.
+ */
+
+use Drupal\Core\Entity\Entity\EntityFormDisplay;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\media\Entity\MediaType;
+
+function di_media_install() {
+  // Update entity form display on core media types to hide URL alias.
+
+	$mediatypes = ['audio', 'file', 'image', 'video', ];
+
+	foreach ($mediatypes as $mediatype) {
+		\Drupal::entityTypeManager()
+		->getStorage('entity_form_display')
+		->load('media.' . $mediatype . '.default')
+		->setComponent('path', [
+			'type' => 'hidden',
+			])->save();
+	}
+}

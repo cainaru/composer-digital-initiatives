@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_video_embed_id
+    - media.type.video_embed
+id: media.video_embed.field_media_video_embed_id
+field_name: field_media_video_embed_id
+entity_type: media
+bundle: video_embed
+label: 'Video ID'
+description: 'The unique ID of a video, provided by the video''s URL from the video hosting platform'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

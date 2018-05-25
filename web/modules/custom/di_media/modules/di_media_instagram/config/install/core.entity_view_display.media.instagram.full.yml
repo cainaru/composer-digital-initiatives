@@ -1,0 +1,148 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - field.field.media.instagram.field_media_author_username
+    - field.field.media.instagram.field_media_description
+    - field.field.media.instagram.field_media_instagram
+    - field.field.media.instagram.field_media_instagram_caption
+    - field.field.media.instagram.field_media_instagram_id
+    - field.field.media.instagram.field_media_instagram_shortcode
+    - field.field.media.instagram.field_media_instagram_type
+    - media.type.instagram
+  module:
+    - field_group
+    - media_entity_instagram
+    - user
+third_party_settings:
+  field_group:
+    group_metadata:
+      children:
+        - field_media_description
+        - group_provided_fields
+        - group_uploader_info
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h2
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Metadata
+      region: content
+    group_provided_fields:
+      children:
+        - field_media_author_username
+        - field_media_instagram_caption
+        - field_media_instagram_shortcode
+      parent_name: group_metadata
+      weight: 11
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Provided Fields'
+      region: content
+    group_uploader_info:
+      children:
+        - created
+        - uid
+      parent_name: group_metadata
+      weight: 12
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Uploader Info'
+      region: content
+id: media.instagram.full
+targetEntityType: media
+bundle: instagram
+mode: full
+content:
+  created:
+    label: inline
+    type: timestamp
+    weight: 9
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  field_media_author_username:
+    type: string
+    weight: 3
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_media_description:
+    type: basic_string
+    weight: 0
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_media_instagram:
+    weight: 1
+    label: visually_hidden
+    settings:
+      width: null
+      hidecaption: false
+    third_party_settings: {  }
+    type: instagram_embed
+    region: content
+  field_media_instagram_caption:
+    weight: 5
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_media_instagram_shortcode:
+    weight: 8
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  uid:
+    label: inline
+    type: author
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_media_instagram_id: true
+  field_media_instagram_type: true
+  thumbnail: true

@@ -1,0 +1,141 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - field.field.media.video_embed.field_media_description
+    - field.field.media.video_embed.field_media_video_embed_field
+    - field.field.media.video_embed.field_media_video_embed_id
+    - field.field.media.video_embed.field_media_video_embed_image_lo
+    - field.field.media.video_embed.field_media_video_embed_source
+    - field.field.media.video_embed.field_media_video_embed_source_n
+    - media.type.video_embed
+  module:
+    - field_group
+    - user
+    - video_embed_field
+third_party_settings:
+  field_group:
+    group_metadata:
+      children:
+        - field_media_description
+        - group_provided_fields
+        - group_uploader_info
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h2
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Metadata
+      region: content
+    group_provided_fields:
+      children:
+        - field_media_video_embed_source_n
+        - field_media_video_embed_id
+      parent_name: group_metadata
+      weight: 10
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Provided Fields'
+      region: content
+    group_uploader_info:
+      children:
+        - created
+        - uid
+      parent_name: group_metadata
+      weight: 11
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Uploader Info'
+      region: content
+id: media.video_embed.full
+targetEntityType: media
+bundle: video_embed
+mode: full
+content:
+  created:
+    label: inline
+    type: timestamp
+    weight: 9
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  field_media_description:
+    type: basic_string
+    weight: 0
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_media_video_embed_field:
+    weight: 1
+    label: visually_hidden
+    settings:
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: false
+    third_party_settings: {  }
+    type: video_embed_field_video
+    region: content
+  field_media_video_embed_id:
+    weight: 5
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_media_video_embed_source_n:
+    weight: 3
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  uid:
+    label: inline
+    type: author
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_media_video_embed_image_lo: true
+  field_media_video_embed_source: true
+  thumbnail: true

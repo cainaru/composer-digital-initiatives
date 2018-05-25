@@ -9,7 +9,7 @@ id: media.video_embed.field_media_video_embed_source_n
 field_name: field_media_video_embed_source_n
 entity_type: media
 bundle: video_embed
-label: 'Source Name'
+label: 'Video Hosting Platform'
 description: 'Video source human name.'
 required: false
 translatable: false

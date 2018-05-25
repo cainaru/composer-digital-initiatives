@@ -3,9 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.flickr.field_media_author_username
+    - field.field.media.flickr.field_media_description
     - field.field.media.flickr.field_media_flickr
     - field.field.media.flickr.field_media_flickr_shortcode
-    - field.field.media.flickr.field_media_flickr_username
     - media.type.flickr
   module:
     - media_entity_flickr
@@ -25,8 +26,9 @@ content:
     region: content
 hidden:
   created: true
+  field_media_author_username: true
+  field_media_description: true
   field_media_flickr_shortcode: true
-  field_media_flickr_username: true
   name: true
   thumbnail: true
   uid: true

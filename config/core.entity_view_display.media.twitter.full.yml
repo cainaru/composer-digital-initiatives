@@ -4,20 +4,20 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.full
+    - field.field.media.twitter.field_media_author_username
+    - field.field.media.twitter.field_media_description
     - field.field.media.twitter.field_media_twitter
     - field.field.media.twitter.field_media_twitter_id
-    - field.field.media.twitter.field_media_twitter_user_info
-    - image.style.thumbnail
     - media.type.twitter
   module:
     - field_group
-    - image
     - media_entity_twitter
     - user
 third_party_settings:
   field_group:
     group_metadata:
       children:
+        - field_media_description
         - group_provided_fields
         - group_uploader_info
       parent_name: ''
@@ -36,9 +36,8 @@ third_party_settings:
       region: content
     group_provided_fields:
       children:
-        - field_media_twitter_user_info
+        - field_media_author_username
         - field_media_twitter_id
-        - thumbnail
       parent_name: group_metadata
       weight: 8
       format_type: html_element
@@ -86,6 +85,21 @@ content:
       custom_date_format: ''
       timezone: ''
     third_party_settings: {  }
+  field_media_author_username:
+    type: string
+    weight: 0
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_media_description:
+    type: basic_string
+    weight: 0
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
   field_media_twitter:
     weight: 1
     label: visually_hidden
@@ -101,14 +115,6 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_media_twitter_user_info:
-    weight: 3
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   name:
     type: string
     weight: 0
@@ -117,15 +123,6 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  thumbnail:
-    type: image
-    weight: 5
-    label: hidden
-    settings:
-      image_style: thumbnail
-      image_link: ''
-    region: content
-    third_party_settings: {  }
   uid:
     label: inline
     type: author
@@ -133,4 +130,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  thumbnail: true

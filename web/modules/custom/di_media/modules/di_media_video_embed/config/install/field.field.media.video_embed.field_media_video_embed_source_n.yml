@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_video_embed_source_n
+    - media.type.video_embed
+id: media.video_embed.field_media_video_embed_source_n
+field_name: field_media_video_embed_source_n
+entity_type: media
+bundle: video_embed
+label: 'Video Hosting Platform'
+description: 'Video source human name.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

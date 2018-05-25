@@ -24,4 +24,4 @@ source_configuration:
   oauth_access_token_secret: ''
 field_map:
   id: field_media_twitter_id
-  user: field_media_twitter_user_info
+  user: field_media_author_username

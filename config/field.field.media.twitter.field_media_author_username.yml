@@ -1,0 +1,19 @@
+uuid: 8cc91400-d729-4429-bec4-988816010fec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_author_username
+    - media.type.twitter
+id: media.twitter.field_media_author_username
+field_name: field_media_author_username
+entity_type: media
+bundle: twitter
+label: 'Author (username)'
+description: 'Username of the author of this content.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
