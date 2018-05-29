@@ -26,10 +26,10 @@ function di_media_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_theme().
  */
-function di_media_theme() {
+function di_media_theme($existing, $type, $theme, $path) {
   return [
-    'di_media' => [
-      'render element' => 'children',
+    'media__full' => [
+      'base hook' => 'media',
     ],
   ];
 }
