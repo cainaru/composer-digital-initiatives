@@ -21,7 +21,10 @@ third_party_settings:
     group_metadata:
       children:
         - field_media_description
-        - group_provided_fields
+        - field_media_author_username
+        - field_media_facebook_url
+        - field_media_facebook_width
+        - field_media_facebook_height
         - group_uploader_info
       parent_name: ''
       weight: 2
@@ -36,26 +39,6 @@ third_party_settings:
         effect: none
         speed: fast
       label: Metadata
-      region: content
-    group_provided_fields:
-      children:
-        - field_media_author_username
-        - field_media_facebook_url
-        - field_media_facebook_width
-        - field_media_facebook_height
-      parent_name: group_metadata
-      weight: 11
-      format_type: html_element
-      format_settings:
-        id: ''
-        classes: ''
-        element: div
-        show_label: true
-        label_element: h3
-        attributes: ''
-        effect: none
-        speed: fast
-      label: 'Provided Fields'
       region: content
     group_uploader_info:
       children:
@@ -87,7 +70,7 @@ content:
     region: content
     settings:
       date_format: custom
-      custom_date_format: 'F d, Y g:i a'
+      custom_date_format: 'F d, Y - g:i a'
       timezone: ''
     third_party_settings: {  }
   field_media_author_username:
