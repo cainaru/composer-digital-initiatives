@@ -1,0 +1,28 @@
+uuid: afc565af-403c-49de-8e25-d8df1320d21d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.narrative.field_title_formatted
+    - node.type.narrative
+  module:
+    - text
+    - user
+id: node.narrative.default
+targetEntityType: node
+bundle: narrative
+mode: default
+content:
+  field_title_formatted:
+    weight: -5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
