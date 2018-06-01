@@ -1,0 +1,21 @@
+uuid: 380a348e-0169-4fa3-931a-2bcacdca2414
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_formatted
+    - node.type.narrative
+  module:
+    - text
+id: node.narrative.field_title_formatted
+field_name: field_title_formatted
+entity_type: node
+bundle: narrative
+label: 'Narrative Title (with formatting)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
