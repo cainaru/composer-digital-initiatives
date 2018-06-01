@@ -1,0 +1,22 @@
+uuid: 1499252a-ddba-4aa1-a3d2-c31f091bbbee
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: scale_crop_1600x900
+label: 'Scale Crop 1600x900'
+effects:
+  c98d5d46-c167-4a9a-babd-1ce976c3ead0:
+    uuid: c98d5d46-c167-4a9a-babd-1ce976c3ead0
+    id: image_effects_auto_orient
+    weight: 1
+    data:
+      scan_exif: true
+  6572b860-d697-4ad5-83fc-371720edf7e8:
+    uuid: 6572b860-d697-4ad5-83fc-371720edf7e8
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 1600
+      height: 900
