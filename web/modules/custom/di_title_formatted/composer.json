@@ -1,0 +1,14 @@
+{
+  "name": "drupal/di_title_formatted",
+  "type": "drupal-module",
+  "description": "Provides a formatted text field and a checkbox",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/di_title_formatted",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/di_title_formatted",
+    "source": "http://cgit.drupalcode.org/di_title_formatted"
+  },
+  "require": { }
+}

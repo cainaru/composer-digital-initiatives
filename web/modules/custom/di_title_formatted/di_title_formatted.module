@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * @file
+ * Contains di_title_formatted.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_help().
+ */
+function di_title_formatted_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the di_title_formatted module.
+    case 'help.page.di_title_formatted':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides a formatted text field and a checkbox') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ * 
+ * Example of conditional fields in node forms for Drupal 8.
+ */
+function di_title_formatted_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'node_narrative_form' || $form_id == 'node_narrative_edit_form') {
+    $form['field_title_formatted']['#states'] = [
+    // Hide field_title_formatted when field_title_formatted_boolean is unchecked
+      'invisible' => [
+        ':input[name="field_title_formatted_boolean[value]"]' => ['checked' => FALSE],
+      ],
+    ];
+
+    $form['field_title_formatted']['widget']['0']['#states'] = [
+    // Update field_title_formatted to be required when field_title_formatted_boolean is checked
+      'required' => [
+        ':input[name="field_title_formatted_boolean[value]"]' => ['checked' => TRUE],
+      ],
+
+    ];
+
+  }
+}

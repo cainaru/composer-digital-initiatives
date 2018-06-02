@@ -1,0 +1,17 @@
+uuid: 996b3472-296a-4483-a3f9-ac8a1418fe6b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Restricted HTML Title Formatted'
+format: restricted_html_title_formatted
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<em> <sub> <sup>'
+      filter_html_help: true
+      filter_html_nofollow: false
