@@ -5,8 +5,8 @@
  * Contains di_title_formatted.module.
  */
 
-use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
  * Implements hook_help().
@@ -39,12 +39,10 @@ function di_title_formatted_form_alter(&$form, \Drupal\Core\Form\FormStateInterf
     ];
 
     $form['field_title_formatted']['widget']['0']['#states'] = [
-    // Update field_title_formatted to be required when field_title_formatted_boolean is checked
+    // Show field_title_formatted as required when field_title_formatted_boolean is checked
       'required' => [
         ':input[name="field_title_formatted_boolean[value]"]' => ['checked' => TRUE],
       ],
-
     ];
-
   }
 }
