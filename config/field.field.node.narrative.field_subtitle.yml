@@ -1,0 +1,30 @@
+uuid: c0633b23-ca04-412f-b479-2eb6620d2085
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+    - node.type.narrative
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    restricted_html_subtitle_formatted: restricted_html_subtitle_formatted
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+    restricted_html_title_formatted: '0'
+id: node.narrative.field_subtitle
+field_name: field_subtitle
+entity_type: node
+bundle: narrative
+label: Subtitle
+description: '<strong>Subtitle</strong> is an extremely brief summary. The subtitle is displayed in content teasers throughout the site and if shared on social media.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

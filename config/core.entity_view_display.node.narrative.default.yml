@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.narrative.field_subtitle
     - field.field.node.narrative.field_title_formatted
+    - field.field.node.narrative.field_title_formatted_boolean
     - node.type.narrative
   module:
     - text
@@ -13,6 +15,13 @@ targetEntityType: node
 bundle: narrative
 mode: default
 content:
+  field_subtitle:
+    weight: -4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_title_formatted:
     weight: -5
     label: hidden
@@ -25,4 +34,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_title_formatted_boolean: true

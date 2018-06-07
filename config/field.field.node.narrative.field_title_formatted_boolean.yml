@@ -1,0 +1,23 @@
+uuid: e4bdf2bd-d768-46fe-b2a2-854c2285311d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_formatted_boolean
+    - node.type.narrative
+id: node.narrative.field_title_formatted_boolean
+field_name: field_title_formatted_boolean
+entity_type: node
+bundle: narrative
+label: 'Provide text formatting for title (optional)'
+description: 'Check only if title must include additional text formatting (e.g., Analysis of <em>Brave New World</em>).'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

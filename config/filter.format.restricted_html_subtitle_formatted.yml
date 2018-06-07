@@ -1,0 +1,17 @@
+uuid: bed635a3-b095-448a-8e31-49f206e3d14d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Restricted HTML Subtitle Formatted'
+format: restricted_html_subtitle_formatted
+weight: 1
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<em> <sub> <sup>'
+      filter_html_help: true
+      filter_html_nofollow: false

@@ -1,4 +1,4 @@
-uuid: 380a348e-0169-4fa3-931a-2bcacdca2414
+uuid: f6d85b5f-1a93-4717-8b35-098e2dfe368a
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,15 @@ dependencies:
     - field.storage.node.field_title_formatted
     - node.type.narrative
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    restricted_html_title_formatted: restricted_html_title_formatted
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
 id: node.narrative.field_title_formatted
 field_name: field_title_formatted
 entity_type: node
@@ -18,4 +26,4 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text
+field_type: text_long

@@ -3,11 +3,33 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.narrative.field_subtitle
     - field.field.node.narrative.field_title_formatted
+    - field.field.node.narrative.field_title_formatted_boolean
     - node.type.narrative
   module:
+    - allowed_formats
+    - field_group
     - path
     - text
+third_party_settings:
+  field_group:
+    group_basic_info:
+      children:
+        - title
+        - field_title_formatted_boolean
+        - field_title_formatted
+        - field_subtitle
+      parent_name: ''
+      weight: -10
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Basic Information'
+      region: content
 id: node.narrative.default
 targetEntityType: node
 bundle: narrative
@@ -19,13 +41,34 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_subtitle:
+    weight: -2
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '0'
+    type: text_textarea
+    region: content
   field_title_formatted:
+    weight: -3
+    settings:
+      rows: 1
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '0'
+    type: text_textarea
+    region: content
+  field_title_formatted_boolean:
     weight: -4
     settings:
-      size: 160
-      placeholder: ''
+      display_label: true
     third_party_settings: {  }
-    type: text_textfield
+    type: boolean_checkbox
     region: content
   path:
     type: path

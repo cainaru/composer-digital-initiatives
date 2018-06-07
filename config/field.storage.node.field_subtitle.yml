@@ -1,12 +1,12 @@
-uuid: e717a72d-67ab-4293-995a-e1f719fed6ad
+uuid: d3935661-21aa-469e-9a73-cc5158fb3506
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - text
-id: node.field_title_formatted
-field_name: field_title_formatted
+id: node.field_subtitle
+field_name: field_subtitle
 entity_type: node
 type: text_long
 settings: {  }

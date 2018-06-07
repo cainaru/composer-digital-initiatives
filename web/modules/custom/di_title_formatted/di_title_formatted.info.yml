@@ -1,0 +1,5 @@
+name: 'Title Formatted Field'
+type: module
+description: 'Provides a formatted text field and a checkbox to enable the formatted text field'
+core: 8.x
+package: 'Digital Initiatives'
