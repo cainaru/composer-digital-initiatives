@@ -2,7 +2,10 @@ uuid: 1499252a-ddba-4aa1-a3d2-c31f091bbbee
 langcode: en
 status: true
 dependencies:
+  config:
+    - crop.type.di_16_9
   module:
+    - crop
     - image_effects
 name: scale_crop_1600x900
 label: 'Scale Crop 1600x900'
@@ -16,7 +19,13 @@ effects:
   6572b860-d697-4ad5-83fc-371720edf7e8:
     uuid: 6572b860-d697-4ad5-83fc-371720edf7e8
     id: image_scale_and_crop
-    weight: 2
+    weight: 3
     data:
       width: 1600
       height: 900
+  86108f7a-c7c0-41ce-ae1e-e57e44354354:
+    uuid: 86108f7a-c7c0-41ce-ae1e-e57e44354354
+    id: crop_crop
+    weight: 2
+    data:
+      crop_type: di_16_9
