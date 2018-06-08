@@ -12,7 +12,8 @@ dependencies:
     - image.style.medium
     - media.type.image
   module:
-    - image
+    - content_moderation
+    - image_widget_crop
 _core:
   default_config_hash: nZlttO4YMwMCpkhYMz7bQ1ZMjABGc59YY1us3eSfvTY
 id: media.image.default
@@ -36,12 +37,24 @@ content:
     region: content
   field_media_image:
     settings:
+      show_crop_area: true
+      show_default_crop: true
+      warn_multiple_usages: true
       preview_image_style: medium
+      crop_preview_image_style: crop_thumbnail
+      crop_list:
+        - di_16_9
       progress_indicator: throbber
     third_party_settings: {  }
-    type: image_image
+    type: image_widget_crop
     weight: 0
     region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   name:
     type: string_textfield
     weight: -5
