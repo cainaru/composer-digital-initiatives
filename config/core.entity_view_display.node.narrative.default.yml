@@ -3,11 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.narrative.field_header_media
     - field.field.node.narrative.field_subtitle
     - field.field.node.narrative.field_title_formatted
     - field.field.node.narrative.field_title_formatted_boolean
     - node.type.narrative
   module:
+    - entity_reference_revisions
     - text
     - user
 id: node.narrative.default
@@ -15,6 +17,15 @@ targetEntityType: node
 bundle: narrative
 mode: default
 content:
+  field_header_media:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   field_subtitle:
     weight: -4
     label: hidden

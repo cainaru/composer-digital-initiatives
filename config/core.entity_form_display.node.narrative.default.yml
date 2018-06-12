@@ -3,13 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.narrative.field_header_media
     - field.field.node.narrative.field_subtitle
     - field.field.node.narrative.field_title_formatted
     - field.field.node.narrative.field_title_formatted_boolean
     - node.type.narrative
   module:
     - allowed_formats
+    - content_moderation
     - field_group
+    - paragraphs
     - path
     - text
 third_party_settings:
@@ -41,6 +44,24 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_header_media:
+    type: paragraphs
+    weight: 0
+    settings:
+      title: 'Header Media'
+      title_plural: 'Header Media'
+      edit_mode: open
+      closed_mode: preview
+      autocollapse: none
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: '0'
+    third_party_settings: {  }
+    region: content
   field_subtitle:
     weight: -2
     settings:
@@ -70,6 +91,12 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   path:
     type: path
     weight: 30

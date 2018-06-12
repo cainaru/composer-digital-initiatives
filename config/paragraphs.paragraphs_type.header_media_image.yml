@@ -1,0 +1,9 @@
+uuid: d10a1752-1243-4c85-a7dc-d8ca50b9027b
+langcode: en
+status: true
+dependencies: {  }
+id: header_media_image
+label: 'Header Media Image'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

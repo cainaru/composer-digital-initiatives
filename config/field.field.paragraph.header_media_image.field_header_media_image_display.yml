@@ -1,0 +1,23 @@
+uuid: fe225ecf-fcc1-4e6d-b5c1-74984827e7d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_header_media_image_display
+    - paragraphs.paragraphs_type.header_media_image
+  module:
+    - options
+id: paragraph.header_media_image.field_header_media_image_display
+field_name: field_header_media_image_display
+entity_type: paragraph
+bundle: header_media_image
+label: 'Image Display Style'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string
