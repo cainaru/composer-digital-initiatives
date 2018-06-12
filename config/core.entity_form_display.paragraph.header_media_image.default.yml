@@ -1,0 +1,58 @@
+uuid: 044cecf5-2495-43f2-b353-a4b95bd077e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.media_entity_browser_modal_image_single_upload
+    - field.field.paragraph.header_media_image.field_header_media_caption
+    - field.field.paragraph.header_media_image.field_header_media_image
+    - field.field.paragraph.header_media_image.field_header_media_image_display
+    - paragraphs.paragraphs_type.header_media_image
+  module:
+    - content_moderation
+    - entity_browser
+    - text
+id: paragraph.header_media_image.default
+targetEntityType: paragraph
+bundle: header_media_image
+mode: default
+content:
+  field_header_media_caption:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_header_media_image:
+    weight: 0
+    settings:
+      entity_browser: media_entity_browser_modal_image_single_upload
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: true
+      open: true
+      selection_mode: selection_prepend
+      field_widget_display_settings:
+        view_mode: preview
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  field_header_media_image_display:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

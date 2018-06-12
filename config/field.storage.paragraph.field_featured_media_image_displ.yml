@@ -1,0 +1,27 @@
+uuid: db14d230-d6fa-4208-81dc-875cd97e614a
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_featured_media_image_displ
+field_name: field_featured_media_image_displ
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: Full-width
+    -
+      value: '2'
+      label: 'Partial width'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

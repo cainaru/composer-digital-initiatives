@@ -1,0 +1,30 @@
+uuid: 64b335e5-66a4-4c11-a29d-bf51621c902e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_featured_media_caption
+    - paragraphs.paragraphs_type.featured_media_image
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+    restricted_html_title_formatted: '0'
+    restricted_html_subtitle_formatted: '0'
+id: paragraph.featured_media_image.field_featured_media_caption
+field_name: field_featured_media_caption
+entity_type: paragraph
+bundle: featured_media_image
+label: Caption
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
