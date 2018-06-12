@@ -1,9 +1,0 @@
-uuid: cd221821-fa50-4557-9d3c-4de209e2e2ca
-langcode: en
-status: true
-dependencies: {  }
-id: featured_media_image
-label: 'Featured Media Image'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }
