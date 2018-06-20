@@ -22,7 +22,7 @@ content:
     weight: 1
     label: hidden
     settings:
-      view_mode: header_media_image_di_16_9
+      view_mode: header_media_image_narrative
       link: ''
     third_party_settings: {  }
     region: content
@@ -44,7 +44,7 @@ content:
     type: boolean
     weight: 0
     region: content
-    label: above
+    label: inline
     settings:
       format: default
       format_custom_false: ''

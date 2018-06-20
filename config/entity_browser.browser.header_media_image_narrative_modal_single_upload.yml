@@ -1,0 +1,52 @@
+uuid: ed9a9877-e3dc-4c82-ad3b-56fc238f2a79
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.media_entity_browser
+  module:
+    - entity_browser_entity_form
+    - views
+name: header_media_image_narrative_modal_single_upload
+label: 'header media image narrative modal_single_upload'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Add image'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  d45210ec-8cab-420f-8253-2a6aa2a62984:
+    settings:
+      view: media_entity_browser
+      view_display: entity_browser_4
+      submit_text: 'Select image'
+      auto_select: false
+    uuid: d45210ec-8cab-420f-8253-2a6aa2a62984
+    weight: 1
+    label: 'My Images'
+    id: view
+  69e007ff-a414-450b-9fa9-730ef1dcb231:
+    settings:
+      view: media_entity_browser
+      view_display: entity_browser_3
+      submit_text: 'Select image'
+      auto_select: false
+    uuid: 69e007ff-a414-450b-9fa9-730ef1dcb231
+    weight: 2
+    label: 'All Images'
+    id: view
+  15819ef0-bd5e-40dc-a936-a091cb216cf2:
+    settings:
+      entity_type: media
+      bundle: image
+      form_mode: header_media_image_narrative
+      submit_text: 'Save image'
+    uuid: 15819ef0-bd5e-40dc-a936-a091cb216cf2
+    weight: 3
+    label: 'Upload New Image'
+    id: entity_form

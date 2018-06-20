@@ -1,10 +1,10 @@
-uuid: 8a31ea18-407e-4f18-9d75-535960ec9724
+uuid: 99cc13e9-9369-4348-b582-a7e3e5353269
 langcode: en
 status: true
 dependencies:
   module:
     - media
-id: media.header_media_image_di_16_9
+id: media.header_media_image_16_9
 label: 'Header Media Image 16:9'
 targetEntityType: media
 cache: true

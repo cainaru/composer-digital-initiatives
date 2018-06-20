@@ -1,9 +1,9 @@
-uuid: 2c335da7-b6bf-4572-a4f8-0673966916c8
+uuid: ccbc8388-0950-416e-8475-0bf9edddbc31
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.header_media_image_di_16_9
+    - core.entity_view_mode.media.header_media_image_16_9
     - field.field.media.image.field_media_description
     - field.field.media.image.field_media_file_size
     - field.field.media.image.field_media_image
@@ -16,10 +16,10 @@ dependencies:
     - image
 _core:
   default_config_hash: jOwnt_yq6AKAfqU6f0xKnxEkFQ2eTPJWxrk3WMLbL68
-id: media.image.header_media_image_di_16_9
+id: media.image.header_media_image_16_9
 targetEntityType: media
 bundle: image
-mode: header_media_image_di_16_9
+mode: header_media_image_16_9
 content:
   field_media_image:
     label: visually_hidden

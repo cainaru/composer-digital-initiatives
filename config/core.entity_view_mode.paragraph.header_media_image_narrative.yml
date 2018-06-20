@@ -1,0 +1,10 @@
+uuid: c2d601cc-3ed0-4078-8f58-88d8ceaa83ea
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.header_media_image_narrative
+label: 'Header Media Image Narrative'
+targetEntityType: paragraph
+cache: true

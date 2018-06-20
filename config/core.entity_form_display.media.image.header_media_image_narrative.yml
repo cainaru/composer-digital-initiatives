@@ -1,25 +1,26 @@
-uuid: f24e321d-eef1-40a6-a66a-33532f0a8fc8
+uuid: 3b335331-97ad-483f-a225-09ad3d2de0e5
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.media.header_media_image_narrative
     - field.field.media.image.field_media_description
     - field.field.media.image.field_media_file_size
     - field.field.media.image.field_media_image
     - field.field.media.image.field_media_image_height
     - field.field.media.image.field_media_image_width
     - field.field.media.image.field_media_mime_type
-    - image.style.large
+    - image.style.medium
     - media.type.image
   module:
     - content_moderation
     - image_widget_crop
 _core:
   default_config_hash: nZlttO4YMwMCpkhYMz7bQ1ZMjABGc59YY1us3eSfvTY
-id: media.image.default
+id: media.image.header_media_image_narrative
 targetEntityType: media
 bundle: image
-mode: default
+mode: header_media_image_narrative
 content:
   created:
     type: datetime_timestamp
@@ -40,7 +41,7 @@ content:
       show_crop_area: true
       show_default_crop: true
       warn_multiple_usages: true
-      preview_image_style: large
+      preview_image_style: medium
       crop_preview_image_style: crop_thumbnail
       crop_list:
         - di_16_9

@@ -1,9 +1,9 @@
-uuid: 3ce6ea5a-9e7d-47be-95e0-649759e11afe
+uuid: c71cbff1-bff6-41b9-b694-c655f0267fc5
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.paragraph.header_media_image_di_16_9
+    - core.entity_view_mode.paragraph.header_media_image_narrative
     - field.field.paragraph.header_media_image.field_header_media_caption
     - field.field.paragraph.header_media_image.field_header_media_image
     - field.field.paragraph.header_media_image.field_header_media_image_display
@@ -11,10 +11,10 @@ dependencies:
   module:
     - options
     - text
-id: paragraph.header_media_image.header_media_image_di_16_9
+id: paragraph.header_media_image.header_media_image_narrative
 targetEntityType: paragraph
 bundle: header_media_image
-mode: header_media_image_di_16_9
+mode: header_media_image_narrative
 content:
   field_header_media_caption:
     weight: 1
@@ -28,7 +28,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      view_mode: header_media_image_di_16_9
+      view_mode: header_media_image_16_9
       link: false
     third_party_settings: {  }
     region: content
