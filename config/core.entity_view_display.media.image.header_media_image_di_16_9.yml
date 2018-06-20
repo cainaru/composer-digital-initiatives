@@ -1,0 +1,42 @@
+uuid: 2c335da7-b6bf-4572-a4f8-0673966916c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.header_media_image_di_16_9
+    - field.field.media.image.field_media_description
+    - field.field.media.image.field_media_file_size
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_media_image_height
+    - field.field.media.image.field_media_image_width
+    - field.field.media.image.field_media_mime_type
+    - image.style.scale_crop_1600x900
+    - media.type.image
+  module:
+    - image
+_core:
+  default_config_hash: jOwnt_yq6AKAfqU6f0xKnxEkFQ2eTPJWxrk3WMLbL68
+id: media.image.header_media_image_di_16_9
+targetEntityType: media
+bundle: image
+mode: header_media_image_di_16_9
+content:
+  field_media_image:
+    label: visually_hidden
+    settings:
+      image_style: scale_crop_1600x900
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_media_description: true
+  field_media_file_size: true
+  field_media_image_height: true
+  field_media_image_width: true
+  field_media_mime_type: true
+  name: true
+  thumbnail: true
+  uid: true
