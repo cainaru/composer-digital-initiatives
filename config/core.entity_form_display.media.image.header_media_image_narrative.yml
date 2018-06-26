@@ -45,6 +45,7 @@ content:
       crop_preview_image_style: crop_thumbnail
       crop_list:
         - di_16_9
+        - di_3_2
       progress_indicator: throbber
     third_party_settings: {  }
     type: image_widget_crop
