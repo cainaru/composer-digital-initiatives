@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.node.narrative.field_header_media
     - field.field.node.narrative.field_subtitle
+    - field.field.node.narrative.field_teaser_media
+    - field.field.node.narrative.field_teaser_text
     - field.field.node.narrative.field_title_formatted
     - field.field.node.narrative.field_title_formatted_boolean
     - node.type.narrative
@@ -55,4 +57,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_teaser_media: true
+  field_teaser_text: true

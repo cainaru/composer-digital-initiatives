@@ -18,6 +18,7 @@ permissions:
   - 'skip comment approval'
   - 'use text format basic_html'
   - 'use text format restricted_html_subtitle_formatted'
+  - 'use text format restricted_html_teaser_text_formatted'
   - 'use text format restricted_html_title_formatted'
   - 'view media'
   - 'view paragraph content header_media_image'

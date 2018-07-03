@@ -1,0 +1,17 @@
+uuid: 8c45e745-e25b-4463-b64a-57720d1b3664
+langcode: en
+status: true
+dependencies: {  }
+name: 'Restricted HTML Teaser Text Formatted'
+format: restricted_html_teaser_text_formatted
+weight: 2
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<em> <sub> <sup>'
+      filter_html_help: true
+      filter_html_nofollow: false
