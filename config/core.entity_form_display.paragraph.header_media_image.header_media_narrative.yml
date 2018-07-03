@@ -1,9 +1,9 @@
-uuid: 8b90abe9-eff9-4ad0-9635-6819c2eecb59
+uuid: fa5be6c3-fc42-40e7-80ce-c22937676247
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_form_mode.paragraph.header_media_image_narrative
+    - core.entity_form_mode.paragraph.header_media_narrative
     - entity_browser.browser.header_media_image_narrative_modal_single_upload
     - field.field.paragraph.header_media_image.field_header_media_caption
     - field.field.paragraph.header_media_image.field_header_media_image
@@ -13,10 +13,10 @@ dependencies:
     - content_moderation
     - entity_browser
     - text
-id: paragraph.header_media_image.header_media_image_narrative
+id: paragraph.header_media_image.header_media_narrative
 targetEntityType: paragraph
 bundle: header_media_image
-mode: header_media_image_narrative
+mode: header_media_narrative
 content:
   field_header_media_caption:
     weight: 1
