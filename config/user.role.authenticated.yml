@@ -20,3 +20,4 @@ permissions:
   - 'use text format restricted_html_subtitle_formatted'
   - 'use text format restricted_html_title_formatted'
   - 'view media'
+  - 'view paragraph content header_media_image'

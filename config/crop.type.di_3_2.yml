@@ -1,0 +1,12 @@
+uuid: b45b1510-1cea-4066-8d52-4503e9a849c9
+langcode: en
+status: true
+dependencies: {  }
+label: 'Generic 3:2'
+id: di_3_2
+description: '3:2'
+aspect_ratio: '3:2'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

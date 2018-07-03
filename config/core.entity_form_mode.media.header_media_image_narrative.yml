@@ -1,0 +1,10 @@
+uuid: 66429566-fde9-43c2-846d-f2c71944cf9b
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.header_media_image_narrative
+label: 'Header Media Image Narrative'
+targetEntityType: media
+cache: true

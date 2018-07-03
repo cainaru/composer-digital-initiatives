@@ -1,0 +1,10 @@
+uuid: 99cc13e9-9369-4348-b582-a7e3e5353269
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.header_media_image_16_9
+label: 'Header Media Image 16:9'
+targetEntityType: media
+cache: true

@@ -1,0 +1,10 @@
+uuid: 6a606558-1be0-4bdd-bc9c-e0bc5f8eae71
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.header_media_image_3_2
+label: 'Header Media Image 3:2'
+targetEntityType: media
+cache: true

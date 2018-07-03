@@ -11,7 +11,7 @@ id: paragraph.header_media_image.field_header_media_image_display
 field_name: field_header_media_image_display
 entity_type: paragraph
 bundle: header_media_image
-label: 'Image Display Option'
+label: 'Image Display Style'
 description: ''
 required: true
 translatable: false

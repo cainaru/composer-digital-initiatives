@@ -1,0 +1,31 @@
+uuid: 7f506b58-f0ba-4776-a923-ee456e7b6593
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.di_3_2
+  module:
+    - crop
+    - image_effects
+name: scale_crop_1600x1067
+label: 'Scale Crop 1600x1067'
+effects:
+  c62b341e-4930-4d29-903c-7375b3f1b71e:
+    uuid: c62b341e-4930-4d29-903c-7375b3f1b71e
+    id: image_effects_auto_orient
+    weight: 1
+    data:
+      scan_exif: true
+  ac2b5142-8539-4ed9-920e-c95b39ac6a16:
+    uuid: ac2b5142-8539-4ed9-920e-c95b39ac6a16
+    id: crop_crop
+    weight: 2
+    data:
+      crop_type: di_3_2
+  c1d790fd-ea6d-4aec-a07a-2d324cfcbb8a:
+    uuid: c1d790fd-ea6d-4aec-a07a-2d324cfcbb8a
+    id: image_scale_and_crop
+    weight: 3
+    data:
+      width: 1600
+      height: 1067
