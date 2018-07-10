@@ -1,4 +1,4 @@
-uuid: ed9a9877-e3dc-4c82-ad3b-56fc238f2a79
+uuid: 667db8eb-f817-4d13-b064-2a2a5cc859f1
 langcode: en
 status: true
 dependencies:
@@ -7,8 +7,8 @@ dependencies:
   module:
     - entity_browser_entity_form
     - views
-name: header_media_image_narrative_modal_single_upload
-label: 'header media image narrative modal_single_upload'
+name: teaser_modal_image_single_upload
+label: 'Teaser Modal Image Single Upload'
 display: modal
 display_configuration:
   width: ''
@@ -20,33 +20,33 @@ selection_display_configuration: {  }
 widget_selector: tabs
 widget_selector_configuration: {  }
 widgets:
-  d45210ec-8cab-420f-8253-2a6aa2a62984:
+  01ab971a-ca9b-409a-b003-f809d47e02bf:
     settings:
       view: media_entity_browser
       view_display: entity_browser_4
       submit_text: 'Select image'
       auto_select: false
-    uuid: d45210ec-8cab-420f-8253-2a6aa2a62984
+    uuid: 01ab971a-ca9b-409a-b003-f809d47e02bf
     weight: 1
     label: 'My Images'
     id: view
-  69e007ff-a414-450b-9fa9-730ef1dcb231:
+  b96bd7a8-ebc6-4ca5-b9c6-bbc1018539a2:
     settings:
       view: media_entity_browser
       view_display: entity_browser_3
       submit_text: 'Select image'
       auto_select: false
-    uuid: 69e007ff-a414-450b-9fa9-730ef1dcb231
+    uuid: b96bd7a8-ebc6-4ca5-b9c6-bbc1018539a2
     weight: 2
     label: 'All Images'
     id: view
-  15819ef0-bd5e-40dc-a936-a091cb216cf2:
+  2d3c3a4b-bd40-4145-ad24-0481e9f38485:
     settings:
       entity_type: media
       bundle: image
-      form_mode: header_media_image_narrative
+      form_mode: teaser
       submit_text: 'Save image'
-    uuid: 15819ef0-bd5e-40dc-a936-a091cb216cf2
+    uuid: 2d3c3a4b-bd40-4145-ad24-0481e9f38485
     weight: 3
     label: 'Upload New Image'
     id: entity_form

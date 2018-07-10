@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.paragraph.header_media_narrative
-    - entity_browser.browser.header_media_image_narrative_modal_single_upload
+    - entity_browser.browser.header_media_narrative_modal_image_single_upload
     - field.field.paragraph.header_media_image.field_header_media_caption
     - field.field.paragraph.header_media_image.field_header_media_image
     - field.field.paragraph.header_media_image.field_header_media_image_display
@@ -29,7 +29,7 @@ content:
   field_header_media_image:
     weight: 0
     settings:
-      entity_browser: header_media_image_narrative_modal_single_upload
+      entity_browser: header_media_narrative_modal_image_single_upload
       field_widget_display: rendered_entity
       field_widget_edit: true
       field_widget_remove: true

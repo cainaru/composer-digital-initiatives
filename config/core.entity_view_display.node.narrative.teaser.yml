@@ -1,8 +1,9 @@
-uuid: afc565af-403c-49de-8e25-d8df1320d21d
+uuid: 490f4fdf-b2b1-40d6-a5dc-feca309867a2
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
     - field.field.node.narrative.field_header_media
     - field.field.node.narrative.field_subtitle
     - field.field.node.narrative.field_teaser_media
@@ -11,52 +12,34 @@ dependencies:
     - field.field.node.narrative.field_title_formatted_boolean
     - node.type.narrative
   module:
-    - entity_reference_revisions
     - text
     - user
-id: node.narrative.default
+id: node.narrative.teaser
 targetEntityType: node
 bundle: narrative
-mode: default
+mode: teaser
 content:
-  field_header_media:
-    type: entity_reference_revisions_entity_view
+  field_teaser_text:
+    type: text_default
     weight: 1
-    label: hidden
-    settings:
-      view_mode: header_media_image_narrative
-      link: ''
-    third_party_settings: {  }
     region: content
-  field_subtitle:
-    weight: -4
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
-    region: content
   field_title_formatted:
-    weight: -5
+    weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_title_formatted_boolean:
-    type: boolean
-    weight: 0
-    region: content
-    label: inline
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
   links:
-    weight: 100
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_header_media: true
+  field_subtitle: true
   field_teaser_media: true
-  field_teaser_text: true
+  field_title_formatted_boolean: true

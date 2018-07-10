@@ -3,14 +3,18 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.teaser_modal_image_single_upload
     - field.field.node.narrative.field_header_media
     - field.field.node.narrative.field_subtitle
+    - field.field.node.narrative.field_teaser_media
+    - field.field.node.narrative.field_teaser_text
     - field.field.node.narrative.field_title_formatted
     - field.field.node.narrative.field_title_formatted_boolean
     - node.type.narrative
   module:
     - allowed_formats
     - content_moderation
+    - entity_browser
     - field_group
     - paragraphs
     - path
@@ -33,6 +37,33 @@ third_party_settings:
         required_fields: false
       label: 'Basic Information'
       region: content
+    group_page_header_section:
+      children:
+        - field_header_media
+      parent_name: ''
+      weight: -8
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Page Header Section'
+      region: content
+    group_teaser:
+      children:
+        - field_teaser_media
+        - field_teaser_text
+      parent_name: ''
+      weight: -9
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: Teaser
+      region: content
 id: node.narrative.default
 targetEntityType: node
 bundle: narrative
@@ -46,7 +77,7 @@ content:
     third_party_settings: {  }
   field_header_media:
     type: paragraphs
-    weight: 0
+    weight: -5
     settings:
       title: 'Header Media'
       title_plural: 'Header Media'
@@ -66,6 +97,32 @@ content:
     weight: -2
     settings:
       rows: 2
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '0'
+    type: text_textarea
+    region: content
+  field_teaser_media:
+    weight: -5
+    settings:
+      entity_browser: teaser_modal_image_single_upload
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: true
+      open: true
+      selection_mode: selection_prepend
+      field_widget_display_settings:
+        view_mode: preview
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  field_teaser_text:
+    weight: -4
+    settings:
+      rows: 3
       placeholder: ''
     third_party_settings:
       allowed_formats:

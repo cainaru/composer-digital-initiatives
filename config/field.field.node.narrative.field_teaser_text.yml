@@ -1,29 +1,29 @@
-uuid: c0633b23-ca04-412f-b479-2eb6620d2085
+uuid: 0706e1fd-7bea-44b1-a4a3-e69952c24389
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_subtitle
+    - field.storage.node.field_teaser_text
     - node.type.narrative
   module:
     - allowed_formats
     - text
 third_party_settings:
   allowed_formats:
-    restricted_html_subtitle_formatted: restricted_html_subtitle_formatted
+    restricted_html_teaser_text_formatted: restricted_html_teaser_text_formatted
     basic_html: '0'
     restricted_html: '0'
     full_html: '0'
     plain_text: '0'
     restricted_html_title_formatted: '0'
-    restricted_html_teaser_text_formatted: '0'
-id: node.narrative.field_subtitle
-field_name: field_subtitle
+    restricted_html_subtitle_formatted: '0'
+id: node.narrative.field_teaser_text
+field_name: field_teaser_text
 entity_type: node
 bundle: narrative
-label: Subtitle
+label: 'Teaser text'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
