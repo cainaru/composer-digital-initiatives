@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.narrative.field_header_media
+    - field.field.node.narrative.field_sections
     - field.field.node.narrative.field_subtitle
     - field.field.node.narrative.field_teaser_media
     - field.field.node.narrative.field_teaser_text
@@ -21,10 +22,19 @@ mode: default
 content:
   field_header_media:
     type: entity_reference_revisions_entity_view
-    weight: 1
+    weight: -2
     label: hidden
     settings:
       view_mode: header_media_image_narrative
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_sections:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
@@ -44,7 +54,7 @@ content:
     region: content
   field_title_formatted_boolean:
     type: boolean
-    weight: 0
+    weight: -3
     region: content
     label: inline
     settings:

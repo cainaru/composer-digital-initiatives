@@ -1,20 +1,20 @@
-uuid: 6189d259-f24e-4173-92b5-32bd726452da
+uuid: b8e2c159-3abc-4618-862f-c355b96cbfb2
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_section_content
+    - field.storage.node.field_sections
+    - node.type.narrative
     - paragraphs.paragraphs_type.section
-    - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
-id: paragraph.section.field_section_content
-field_name: field_section_content
-entity_type: paragraph
-bundle: section
-label: 'Section content'
+id: node.narrative.field_sections
+field_name: field_sections
+entity_type: node
+bundle: narrative
+label: Sections
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -23,15 +23,15 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      text: text
+      section: section
     target_bundles_drag_drop:
       header_media_image:
         weight: 4
         enabled: false
       section:
-        weight: 5
-        enabled: false
-      text:
         enabled: true
+        weight: 5
+      text:
         weight: 6
+        enabled: false
 field_type: entity_reference_revisions
