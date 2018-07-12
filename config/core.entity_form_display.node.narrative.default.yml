@@ -5,6 +5,7 @@ dependencies:
   config:
     - entity_browser.browser.teaser_modal_image_single_upload
     - field.field.node.narrative.field_header_media
+    - field.field.node.narrative.field_sections
     - field.field.node.narrative.field_subtitle
     - field.field.node.narrative.field_teaser_media
     - field.field.node.narrative.field_teaser_text
@@ -37,19 +38,6 @@ third_party_settings:
         required_fields: false
       label: 'Basic Information'
       region: content
-    group_page_header_section:
-      children:
-        - field_header_media
-      parent_name: ''
-      weight: -8
-      format_type: fieldset
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        required_fields: false
-      label: 'Page Header Section'
-      region: content
     group_teaser:
       children:
         - field_teaser_media
@@ -63,6 +51,32 @@ third_party_settings:
         description: ''
         required_fields: false
       label: Teaser
+      region: content
+    group_main_content:
+      children:
+        - field_sections
+      parent_name: ''
+      weight: -7
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Main Content'
+      region: content
+    group_page_header:
+      children:
+        - field_header_media
+      parent_name: ''
+      weight: -8
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Page Header'
       region: content
 id: node.narrative.default
 targetEntityType: node
@@ -79,8 +93,8 @@ content:
     type: paragraphs
     weight: -5
     settings:
-      title: 'Header Media'
-      title_plural: 'Header Media'
+      title: 'header media'
+      title_plural: 'header media'
       edit_mode: closed
       closed_mode: preview
       autocollapse: none
@@ -91,6 +105,24 @@ content:
         duplicate: '0'
         collapse_edit_all: '0'
         add_above: '0'
+    third_party_settings: {  }
+    region: content
+  field_sections:
+    type: paragraphs
+    weight: -5
+    settings:
+      title: section
+      title_plural: sections
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: add_above
     third_party_settings: {  }
     region: content
   field_subtitle:
@@ -115,7 +147,7 @@ content:
       open: true
       selection_mode: selection_prepend
       field_widget_display_settings:
-        view_mode: preview
+        view_mode: teaser
     third_party_settings: {  }
     type: entity_browser_entity_reference
     region: content
