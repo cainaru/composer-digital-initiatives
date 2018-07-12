@@ -65,7 +65,7 @@ third_party_settings:
         required_fields: false
       label: 'Main Content'
       region: content
-    group_page_header:
+    group_header_content:
       children:
         - field_header_media
       parent_name: ''
@@ -76,7 +76,7 @@ third_party_settings:
         classes: ''
         description: ''
         required_fields: false
-      label: 'Page Header'
+      label: 'Header Content'
       region: content
 id: node.narrative.default
 targetEntityType: node
