@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains di_header_content.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function di_header_content_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the di_header_content module.
+    case 'help.page.di_header_content':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides configuration and processing magic to build fancy headers on nodes') . '</p>';
+      return $output;
+
+    default:
+  }
+}

@@ -1,0 +1,5 @@
+name: 'Digital Initiatives Header Content'
+type: module
+description: 'Provides configuration and processing magic to build fancy headers on nodes'
+core: 8.x
+package: 'Digital Initiatives'
