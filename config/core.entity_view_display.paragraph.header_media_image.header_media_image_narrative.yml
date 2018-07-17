@@ -9,7 +9,6 @@ dependencies:
     - field.field.paragraph.header_media_image.field_header_media_image_display
     - paragraphs.paragraphs_type.header_media_image
   module:
-    - options
     - text
 id: paragraph.header_media_image.header_media_image_narrative
 targetEntityType: paragraph
@@ -32,11 +31,5 @@ content:
       link: false
     third_party_settings: {  }
     region: content
-  field_header_media_image_display:
-    weight: 2
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-hidden: {  }
+hidden:
+  field_header_media_image_display: true

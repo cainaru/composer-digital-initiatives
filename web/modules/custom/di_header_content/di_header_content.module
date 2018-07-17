@@ -1,0 +1,60 @@
+<?php
+
+/**
+ * @file
+ * Contains di_header_content.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function di_header_content_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the di_header_content module.
+    case 'help.page.di_header_content':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides configuration and processing magic to build fancy headers on nodes') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function di_header_content_preprocess_paragraph(array &$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+	$paragraph = $variables['paragraph'];
+	$bundle = $paragraph->bundle();
+
+	// Add custom styling for the section paragraph type.
+	if ($bundle === 'header_media_image') {
+
+		/** @var \Drupal\media\Entity\Media $media */
+
+		if ($media = $paragraph->get('field_header_media_image')->entity) {
+
+			if ($paragraph->hasField('field_header_media_image_display')) {
+				switch($paragraph->get('field_header_media_image_display')->value){
+					case "1":
+					  $entity_view_mode = "header_media_image_16_9";
+					  break;
+					case "2":
+					  $entity_view_mode = "header_media_image_3_2";
+					  break;
+					default:
+					  $entity_view_mode = "header_media_image_16_9";
+				}
+			}
+
+			// $variables['content']['media'] = entity_view($media, $paragraph->get('field_header_media_image_display'));
+
+			// $variables['content']['media'] = entity_view($media, $entity_view_mode);
+
+			// $variables['content']['field_header_media_image'] = entity_view($media, $entity_view_mode);
+
+			$variables['content']['field_header_media_image']['0'] = entity_view($media, $entity_view_mode);
+		}
+	}
+}
