@@ -2,7 +2,7 @@ name: 'Media Twitter'
 type: module
 description: 'Twitter support for Digital Initiatives Media'
 core: 8.x
-package: 'Digital Initiatives'
+package: 'Digital Initiatives Media'
 dependencies:
   - di_media
   - media_entity_twitter

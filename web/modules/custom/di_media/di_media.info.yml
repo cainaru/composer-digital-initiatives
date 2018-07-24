@@ -2,7 +2,7 @@ name: 'Digital Initiatives Media'
 type: module
 description: 'Awesome media handling for Digital Initiatives. So lit, you shouldn’t touch with bare hands.'
 core: 8.x
-package: 'Digital Initiatives'
+package: 'Digital Initiatives Media'
 dependencies:
   - crop
   - ctools
